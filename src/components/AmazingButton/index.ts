@@ -1,0 +1,1 @@
+export { AmazingButton } from "./AmazingButton";
