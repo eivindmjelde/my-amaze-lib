@@ -6,12 +6,12 @@ const Button = styled.button`
   border: 2px solid hotpink;
 `;
 
-type AmazingButtonProps = {
-  text?: string;
+export type AmazingButtonProps = {
+  text: string;
 };
 
 export function AmazingButton({
-  text = "Imma button brah",
+  text = "Button text",
 }: AmazingButtonProps): ReactElement {
   return (
     <>

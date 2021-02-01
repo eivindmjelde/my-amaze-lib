@@ -1,7 +1,19 @@
 {
   "name": "my-amaze-lib",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.1.1",
+  "private": false,
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eivindmjelde/my-amaze-lib.git"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -18,12 +30,14 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "clean": "rm -rf ./lib",
+    "prebuild": "yarn clean",
+    "start": "start-storybook -p 6006 -s public",
+    "build": "tsc --build \"./tsconfig.json\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "eslintConfig": {
     "extends": [
@@ -53,5 +67,8 @@
     "@storybook/storybook-deployer": "^2.8.7",
     "@types/styled-components": "^5.1.7",
     "semantic-release": "^17.3.7"
+  },
+  "resolutions": {
+    "@types/react": "^16"
   }
 }

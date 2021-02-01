@@ -1,10 +1,13 @@
+import { Meta, Story } from "@storybook/react";
 import React from "react";
-import { Meta } from "@storybook/react/types-6-0";
-import { AmazingButton } from "./";
+import { AmazingButton, AmazingButtonProps } from "./";
 
 export default {
-  title: "Components/Button",
+  title: "AmazingButton",
   component: AmazingButton,
-} as Meta;
+} as Meta<AmazingButtonProps>;
 
-export const Primary = () => <AmazingButton />;
+const Template: Story<AmazingButtonProps> = (args) => (
+  <AmazingButton {...args} />
+);
+export const Default = Template.bind({});
