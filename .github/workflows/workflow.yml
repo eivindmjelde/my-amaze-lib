@@ -13,10 +13,10 @@ jobs:
           node-version: "12"
       # - run: npm ci
       - run: yarn install --frozen-lockfile --ignore-platform
-      - run: yarn test
-      - run: yarn build
+      # - run: yarn test
+      - run: mkdir lib && yarn build && ls -al ./lib
       - name: Release
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: npx semantic-release
+        run: ls -al && cd ./lib && npx semantic-release

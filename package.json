@@ -35,7 +35,7 @@
     "clean": "rm -rf ./lib",
     "prebuild": "yarn clean",
     "start": "start-storybook -p 6006 -s public",
-    "build": "tsc --build \"./tsconfig.json\"",
+    "build": "tsc --build --extendedDiagnostics --listFiles",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-storybook": "build-storybook -s public",
