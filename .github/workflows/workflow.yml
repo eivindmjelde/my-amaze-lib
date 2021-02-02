@@ -1,7 +1,10 @@
 name: CI
-on: push
+on:
+  push:
+    branches:
+      - "main"
 jobs:
-  test:
+  release:
     runs-on: ubuntu-16.04
     steps:
       - uses: actions/checkout@v2
