@@ -35,11 +35,10 @@
     "clean": "rm -rf ./lib",
     "prebuild": "yarn clean",
     "start": "start-storybook -p 6006 -s public",
-    "build": "tsc --build --extendedDiagnostics --listFiles",
+    "build": "tsc --build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build-storybook": "build-storybook -s public",
-    "deploy-storybook": "storybook-to-ghpages",
+    "build-storybook": "build-storybook",
     "cm": "cz",
     "semantic-release": "semantic-release"
   },

@@ -13,10 +13,19 @@ jobs:
           node-version: "12"
       # - run: npm ci
       - run: yarn install --frozen-lockfile --ignore-platform
-      # - run: yarn test
-      - run: mkdir lib && yarn build && ls -al ./lib
-      - name: Release
+      - run: yarn test
+      - run: mkdir lib && yarn build
+      - name: Release NPM package
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: ls -al && npx semantic-release
+        run: npx semantic-release
+      - name: Build Storybook
+        run: yarn build-storybook
+      - name: Deploy Storybook
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: storybook-static # The folder the action should deploy.
+          CLEAN: true # Automatically remove deleted files from the deploy branch
