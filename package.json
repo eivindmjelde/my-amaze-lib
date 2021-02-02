@@ -1,6 +1,6 @@
 {
   "name": "my-amaze-lib",
-  "version": "0.1.1",
+  "version": "0.0.0-development",
   "private": false,
   "license": "MIT",
   "main": "lib/index.js",
@@ -38,7 +38,8 @@
     "eject": "react-scripts eject",
     "build-storybook": "build-storybook -s public",
     "deploy-storybook": "storybook-to-ghpages",
-    "cm": "cz"
+    "cm": "cz",
+    "semantic-release": "semantic-release"
   },
   "eslintConfig": {
     "extends": [
