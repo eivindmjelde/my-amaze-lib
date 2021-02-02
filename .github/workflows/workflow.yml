@@ -9,6 +9,7 @@ jobs:
         with:
           node-version: "12"
       # - run: npm ci
+      - run: yarn install --frozen-lockfile --ignore-platform
       - run: yarn test
       - name: Release
         env:
