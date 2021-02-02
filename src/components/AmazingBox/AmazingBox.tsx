@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 import styled from "styled-components";
 
-type AmazingBoxProps = {
+export type AmazingBoxProps = {
   madProp: string;
 };
 
