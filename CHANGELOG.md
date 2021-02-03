@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/eivindmjelde/my-amaze-lib/compare/v1.1.3...v1.2.0) (2021-02-03)
+
+
+### Features
+
+* **box:** add circle to lib ([10840f4](https://github.com/eivindmjelde/my-amaze-lib/commit/10840f4c20c0b2d3694f6250d97430b6025c0c65)), closes [#4](https://github.com/eivindmjelde/my-amaze-lib/issues/4)
+
 ## [1.1.3](https://github.com/eivindmjelde/my-amaze-lib/compare/v1.1.2...v1.1.3) (2021-02-02)
 
 
