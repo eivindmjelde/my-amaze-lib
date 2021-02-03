@@ -100,6 +100,7 @@
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
+
   "lint-staged": {
     "*.+(js|ts|tsx)": [
       "eslint"
