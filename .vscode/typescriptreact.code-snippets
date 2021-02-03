@@ -29,6 +29,13 @@
       "const Template: Story<${TM_FILENAME_BASE/^([^.]+).*/${1}/}Props> = args => <${TM_FILENAME_BASE/^([^.]+).*/${1}/} {...args} />;",
       "export const Default = Template.bind({});"
     ],
-    "description": "Base spacing unit"
+    "description": "Scaffold a Storybook story"
+  },
+  "Barrel": {
+    "prefix": "barrel",
+    "body": [
+      "export { ${1} } from './${1}';",
+      "export type { ${1}Props } from './${1}';"
+    ]
   }
 }
