@@ -23,12 +23,11 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "clean": "rm -rf ./lib",
+    "clean": "if test -d lib; then rm -rf lib; fi; rm -f tsconfig.tsbuildinfo",
     "prebuild": "yarn clean",
     "start": "start-storybook -p 6006 -s public",
-    "build": "tsc --build",
+    "build": "tsc --build --listFiles --listEmittedFiles",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "build-storybook": "build-storybook",
     "semantic-release": "semantic-release"
   },
@@ -97,7 +96,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
+      "pre-commit": "tsc && lint-staged",
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
