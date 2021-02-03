@@ -26,7 +26,7 @@
     "clean": "if test -d lib; then rm -rf lib; fi; rm -f tsconfig.tsbuildinfo",
     "prebuild": "yarn clean",
     "start": "start-storybook -p 6006 -s public",
-    "build": "tsc --build --listFiles --listEmittedFiles",
+    "build": "tsc --build --listEmittedFiles",
     "test": "react-scripts test",
     "build-storybook": "build-storybook",
     "semantic-release": "semantic-release"
@@ -107,22 +107,5 @@
     "**/*.+(js|json|ts|tsx)": [
       "prettier --write"
     ]
-  },
-  "prettier": {
-    "arrowParens": "avoid",
-    "bracketSpacing": true,
-    "htmlWhitespaceSensitivity": "css",
-    "insertPragma": false,
-    "jsxBracketSameLine": false,
-    "jsxSingleQuote": false,
-    "printWidth": 80,
-    "proseWrap": "always",
-    "quoteProps": "as-needed",
-    "requirePragma": false,
-    "semi": true,
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "all",
-    "useTabs": false
   }
 }

@@ -19,6 +19,8 @@ jobs:
         run: yarn build && ls -l ./lib
       - name: Verify build
         run: test -f lib/index.js
+      - name: Copy configs to lib
+        run: cp .prettierrc.js lib
       - name: Release NPM package
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
